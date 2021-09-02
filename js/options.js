@@ -17,6 +17,6 @@ function onClick() {
 }
 
 start.onclick = () => {
-    buttons.forEach(button => button.remove());
+    controls.replaceChildren();
     run();
 };
