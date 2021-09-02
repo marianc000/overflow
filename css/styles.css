@@ -1,0 +1,70 @@
+.row>div {
+    display: inline-block;
+    border: 1px solid red;
+    box-sizing: border-box;
+    width: 5%;
+    height: 100%;
+    vertical-align: middle;
+}
+
+.row {
+    height: 1.5em;
+}
+ 
+
+table {
+    border-collapse: collapse;
+    margin-bottom: 2em;
+}
+
+th, td {
+    padding: 0.5em;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+}
+
+td:first-child {
+    text-align: left;
+}
+
+* {
+    font-family: arial;
+}
+ 
+caption {
+    font-size: 1.5em;
+}
+
+#root {
+    margin-top: 1em;
+}
+
+#root.tableHidden {
+  display:none;
+}
+
+#root.backgroundColor{
+  overflow:clip;
+}
+
+.overflowHidden .row div {
+    overflow: hidden;
+}
+
+.overflowClip .row div {
+    overflow: clip;
+}
+
+.backgroundColor .row div {
+    
+background-color: white;
+}
+
+button.selected {
+    background-color: palegreen;
+}
+
+button#start {
+    margin-left: 6em;
+    background-color: orange;
+}
