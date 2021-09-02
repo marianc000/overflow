@@ -42,18 +42,18 @@ function flatten(data) {
 function displayTable(data, caption) {
     addAverage(data);
     data = flatten(data);
-    const headers = tr(th('Method') + data[0].slice(1, -1).map((v, i) => th(i)).join('') + th('Average'));
+    const headers = tr(th('Style') + data[0].slice(1, -1).map((v, i) => th(i)).join('') + th('Average'));
     const rows = data.map(row => tr(row.map(cell => td(cell)).join(''))).join('');
     const html = table(caption, headers + rows);
-    root.insertAdjacentHTML('afterbegin', html);
-    root.style.display = 'block';
+    controls.insertAdjacentHTML('afterbegin', html);
 }
 
 export default function showResults() {
     const { dom, paint } = separate();
-    //  root.replaceChildren(); 
+    controls.replaceChildren(); 
+
     displayTable(paint, 'Painting');
-    displayTable(dom, 'Changing DOM ');
+    displayTable(dom, 'Changing container class');
 
 }
 

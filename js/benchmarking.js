@@ -5,14 +5,9 @@ import { execute } from './shared.js';
 import showResults from './results.js';
 import hide from './clear.js';
  
-
-
- 
-
 function show(clazz) {
     return execute(clazz, () => {
         root.className = clazz;
-        root.style.display = 'block';
     });
 }
 

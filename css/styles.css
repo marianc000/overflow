@@ -33,6 +33,7 @@ td:first-child {
  
 caption {
     font-size: 1.5em;
+    white-space: nowrap;
 }
 
 #root {
@@ -68,6 +69,6 @@ button#start {
     margin-left: 6em;
     background-color: orange;
 }
-.controls {
+#controls {
     text-align: center;
 }
