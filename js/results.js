@@ -52,8 +52,8 @@ export default function showResults() {
     const { dom, paint } = separate();
     controls.replaceChildren(); 
 
-    displayTable(paint, 'Rendering table');
-    displayTable(dom, 'Changing table container class');
+    displayTable(paint, 'Rendering table, ms');
+    displayTable(dom, 'Changing table container class, ms');
 
 }
 
