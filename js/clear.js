@@ -3,7 +3,7 @@ export default function clear() {
         requestAnimationFrame(() => {
             root.className = "tableHidden";
             setTimeout(() => {
-                setTimeout(resolve,1000);
+                setTimeout(resolve,100);
             });
         });
     });

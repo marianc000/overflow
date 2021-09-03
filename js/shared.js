@@ -11,15 +11,15 @@ function addResult(label, start, domDone, rendered) {
     results[label].push({ start, domDone, rendered });
 }
 
-export function execute(label, changeDom) {
+export function execute(label, changeStyle) {
     return new Promise(resolve => {
         requestAnimationFrame(() => {
             const start = Date.now();
-            changeDom();
-            const domDone = Date.now();
+            changeStyle();
+            const styleChanged = Date.now();
             setTimeout(() => {
-                addResult(label, start, domDone, Date.now());
-                setTimeout(resolve,1000);
+                addResult(label, start, styleChanged, Date.now());
+                setTimeout(resolve,100);
             });
         });
     });
