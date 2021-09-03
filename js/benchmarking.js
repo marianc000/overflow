@@ -14,7 +14,7 @@ function show(clazz) {
 
 export default function run() {
     console.log("run");
-    const times = 1;
+    const times = 20;
     let p = Promise.resolve().then(hide);
 
 
